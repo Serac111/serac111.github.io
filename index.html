@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -71,17 +71,44 @@
         }
 
         /* Contenedor principal */
+
         .container {
             background: #101317;
             border-radius: 20px;
             padding: 40px;
-            max-width: 600px;
+            max-width: 1200px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
             text-align: center;
+            /*column-count: 2;*/
         }
 
+        
+        .columnContainer {
+
+            column-count: 2;
+        }
+
+        .image-wrapper {
+    /* Use negative margins that match the container's padding */
+    margin-left: -40px;
+    margin-right: -40px;
+    margin-top: -40px;
+
+    /* If you have top/bottom padding you want to overlap, add negative margin-top/bottom as well */
+}
+
+.image-wrapper img {
+    /* Ensure the image fills the full width of its wrapper (which is now wider than the container's content area) */
+    width: 100%;
+    /* Optional: Use object-fit: cover to ensure the image covers the area nicely without stretching */
+    object-fit: cover;
+
+     border-radius: 20px 20px 0px 0px;
+    /* Optional: Adjust max-height if needed */
+}
+
         h1 {
-            color: #eaf2f5;
+            color: #f2244e;
             margin-bottom: 20px;
             font-size: 2.5em;
         }
@@ -89,23 +116,29 @@
         p {
             margin-bottom: 20px;
             font-size: 1.1em;
-            color: #555;
+            color: #eaf2f5;
         }
 
         .button {
             display: inline-block;
-            background: #667eea;
+            background: #f2244e;
             color: white;
-            padding: 15px 30px;
+          padding: 5px;
+          width: 450px;
             text-decoration: none;
-            border-radius: 50px;
+            border-radius: 10px;
             font-weight: bold;
             transition: all 0.3s ease;
-            margin: 10px;
+            margin: 15px;
+             display: flex;
+             justify-content: center;
+                align-items: center;
+  
+
         }
 
         .button:hover {
-            background: #764ba2;
+            background: #3b0d28;
             transform: translateY(-2px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
@@ -114,6 +147,8 @@
             font-size: 4em;
             margin-bottom: 20px;
         }
+
+        
     </style>
 </head>
 <body>
@@ -121,17 +156,49 @@
 <canvas id="noise"></canvas>
 
 <img src="SeracSigil.png" alt="Logo" class="logo">
+ 
+
 
 <div class="page">
     <div class="container">
-        <div class="emoji">🚀</div>
-        <h1>¡Bienvenido!</h1>
-        <p>Esta es tu página web simple y bonita.</p>
-        <p>Puedes personalizarla como quieras editando el código HTML.</p>
-        <a href="#" class="button"
+   
+        <!-- <div class="emoji">🚀</div> -->
+            <div class="image-wrapper">
+        <img src="Thumbnail.png" width=1200px height=400px>
+            </div>
+<p>══════════════════════════════════════════════════════════════════════════════════════════ </p>
+        <div class="columnContainer">
+       
+        <h1>⌠Matias Formas⌡</h1>
+         
+        <p>Game Developer, Digital Artist </p>
+
+        <a href="https://www.linkedin.com/in/matias-formas-147028250/">
+        <img src="https://img.icons8.com/ios11/512/FFFFFF/linkedin.png" height=32px></a>
+        <a href="https://x.com/Serac111">
+        <img src="https://img.icons8.com/ios11/512/FFFFFF/twitterx--v2.png" height=32px></a>
+        <a href="https://www.instagram.com/serac111/">
+        <img src="https://img.icons8.com/ios11/512/FFFFFF/instagram-new.png" height=32px></a>
+        <!--<a href="URL_of_destination">Link Text</a>-->
+       <!-- <p>EXAMPLE TEXT</p> -->
+    <a href="#" class="button"
            onclick="alert('¡Hola! Esto es un botón interactivo'); return false;">
-           Haz clic aquí
+                 <img src="PaintIcon.png" height=32px>
+               Illustration
+    </a>
+
+    <a href="#" class="button"
+           onclick="alert('¡Hola! Esto es un botón interactivo'); return false;">
+                <img src="3DIcon.png" height=32px>
+                  Modeling
         </a>
+         <h3></h3>
+    <a href="#" class="button"
+           onclick="alert('¡Hola! Esto es un botón interactivo'); return false;">
+        <img src="InfoIcon.png" height=32px>
+                  About  
+        </a>
+       
     </div>
 </div>
 
